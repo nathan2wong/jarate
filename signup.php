@@ -36,6 +36,7 @@
         <?php include("navbar-reg.php"); ?>
         <main>
             <div class="container">
+                <h2 class="center section-header">Sign Up!</h2>
                 <form method="post">
                     <div class="row">
                         <div class="input-field col s12 l6">
@@ -63,6 +64,9 @@
                             <label for="pass-check">Password Check</label>
                         </div>
                     </div>
+                    <button id="submit" name="submit" class="btn-large waves-block waves-effect waves-light center-align" type="submit" style="margin: auto;">Submit
+                        <i class="material-icons left">send</i>
+                    </button>
                 </form>
             </div>
         </main>

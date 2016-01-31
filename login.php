@@ -34,10 +34,9 @@
         <header>
             <?php include("navbar.php"); ?>
         </header>
-
         <main>
             <div class="container">
-                <h2 class="center red-text section-header">Login</h2>
+                <h2 class="center section-header">Login</h2>
                 <form method="post" class="center">
                     <div class="row">
                         <div class="input-field col s12 m6 offset-l3">
