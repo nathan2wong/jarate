@@ -13,7 +13,7 @@
             <div class="parallax-container valign-wrapper" style="height: 91vh;">
                 <div class="container valign center">
                     <h1>Jarate</h1>
-                    <p>Description</p>
+                    <a class="waves-effect waves-light btn-flat btn-large z-depth-5" href="app.php">Try Now!</a>
                 </div>
                 <div class="parallax"><img src="http://placehold.it/500x400"></div>
             </div>
