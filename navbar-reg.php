@@ -9,11 +9,13 @@
             <ul id="nav" class="right hide-on-med-and-down">
                 <li><a class="waves-effect waves-light black-text" href="signup"><i class="material-icons left">group</i>Register</a></li>
                 <li><a class="waves-effect waves-light black-text" href="login"><i class="material-icons left">send</i>Login</a></li>
+                <li><a class="waves-effect waves-light black-text" href="about">About Us & Technology</a></li>
             </ul>
             <ul class="side-nav" id="mobile-nav">
                 <li><a href="app" class="black-text">Try Now!</a></li>
                 <li><a class="waves-effect waves-light black-text" href="signup"><i class="material-icons left">group</i>Register</a></li>
                 <li><a class="waves-effect waves-light black-text" href="login"><i class="material-icons left">send</i>Login</a></li>
+                <li><a class="waves-effect waves-light black-text" href="about">About Us & Technology</a></li>
             </ul>
         </div>
     </nav>
