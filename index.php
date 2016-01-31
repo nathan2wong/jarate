@@ -18,7 +18,7 @@
                     <h3 class="center black-text section-header wow slideInUp">What is Jarate?</h3>
                     <div class="row">
                         <div class="col s4 m2 wow slideInUp">
-                            <h2 class="center black-text"><i class="material-icons medium">perm_identity</i></h2>
+                            <h2 class="center black-text"><i class="material-icons medium">verified_user</i></h2>
                         </div>
                         <div class="col s8 m4 wow slideInUp">
                             <h4 class="black-text col-content">Accuracy</h4>
@@ -32,14 +32,14 @@
                             <p>If you choose to subscribe to our serivce by creating an user account, we can help you track your urine data and create charts and graphs to detail your change over time.</p>
                         </div>
                         <div class="col s4 m2 wow slideInUp">
-                            <h2 class="center black-text"><i class="material-icons medium">perm_identity</i></h2>
+                            <h2 class="center black-text"><i class="material-icons medium">room</i></h2>
                         </div>
                         <div class="col s8 m4 wow slideInUp">
                             <h4 class="black-text col-content">Widespread Influence</h4>
                             <p>With integration of the IBM Watson Language Identification API, we were able to identify and translate (beta) different languages in order to bring our app into international markets.</p>
                         </div>
                         <div class="col s4 m2 wow slideInUp">
-                            <h2 class="center black-text"><i class="material-icons medium">perm_identity</i></h2>
+                            <h2 class="center black-text"><i class="material-icons medium">redeem</i></h2>
                         </div>
                         <div class="col s8 m4 wow slideInUp">
                             <h4 class="black-text col-content">Constantly Evolving</h4>
