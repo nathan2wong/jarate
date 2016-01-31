@@ -17,8 +17,17 @@
                     <div id="user-image" class="col s12 m9">
                         <img class="z-depth-3" id="myImg" src="#" alt="Upload your image!" height="575px" width="400px" />
                     </div>
-                    <div class="col s12 m3">
-                        <p id="info"></p>
+                        <div class="col s12 m3">
+                        <p id="info">
+                             <p>
+                                    <ol>
+                                        <li>1. Take a picture of your urine save it onto your computer. </li>
+                                        <li>2. Click 'Choose Image!' and then click on the target area of your urine that most accurately resembles your excretions.</li>
+                                    </ol>
+                                </p>
+                                    <br />
+
+                        </p>
                         <br />
                         <form action="#">
                             <div class="file-field input-field valign">
