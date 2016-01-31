@@ -6,21 +6,22 @@
     }
     $msg = "";
     if(isset($_POST['submit'])) {
+
         if($_POST['fname'] != null && $_POST['pass'] != null && $_POST['check-pass'] != null && $_POST['email'] != null && $_POST['lname'] != null) {
+
             $user = stripslashes($_POST['email']);
             $pass = sha1(stripslashes($_POST['pass']));
-            $fname = stipslashes($_POST['fname']);
-            $lname = stipslashes($_POST['lname']);
-            $query = $connect->query("SELECT * FROM `users` WHERE `email`='$user' LIMIT 1");
-            if($query->num_rows < 0) {
+            $fname = stripslashes($_POST['fname']);
+            $lname = stripslashes($_POST['lname']);
+
+                echo "<script>console.log(\"Swag money\");</script>";
                 $max = $connect->query("SELECT * FROM `users` ORDER BY `ID` DESC LIMIT 1");
+                                echo "<script>console.log(\"Enter\")</script>";
                 $max = mysqli_fetch_array($max);
                 $max = $max['ID'] + 1;
-                $connect->query("INSERT INTO `users` (`ID`, `fname`, `lname`, `email`, `pass`) VALUES($max, '$fname', '$lname', '$user', '$pass')");
+                            echo "<script>console.log(\",$max,"\")</script>";
+                $connect->query("INSERT INTO `users` (`1`, `2`, `3`, `4`, `5`, `6`, `7, `day`, `ID`, `fname`, `lname`, `email`, `pass`) VALUES(0, 0, 0, 0, 0, 0, 0, 0, $max, '$fname', '$lname', '$user', '$pass')");
                 $msg = "Successfully created account!";
-            } else {
-                $msg = "Email already registered!";
-            }
         } else {
             $msg = "Please completely fill out the form!";
         }
@@ -60,11 +61,7 @@
                             <label for="pass">Password</label>
                         </div>
                         <div class="input-field col s12 l6">
-<<<<<<< HEAD
                             <input id="check-pass" name="check-pass" type="password">
-=======
-                            <input id="check-pass" name="check-pass" type="text">
->>>>>>> b1e3d94ce4a2573ab4ec4f1a462a1edb35e3f0fb
                             <label for="check-pass">Password Check</label>
                         </div>
                     </div>

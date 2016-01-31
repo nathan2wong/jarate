@@ -1,10 +1,4 @@
 <?php
-    include("initialize.php");
-    if(isset($_SESSION['user'])){
-
-    }
-    include("variables.php");
-
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +15,7 @@
             <div class="container" style="margin-top: 1em;">
                 <div class="row center valign-wrapper">
                     <div id="user-image" class="col s12 m9">
-                        <img class="z-depth-3" src="#" alt="http://placehold.it/400x575">
+                        <img class="z-depth-3" id="myImg" src="#" alt="Upload your image!" height="575px" width="400px" />
                     </div>
                     <div class="col s12 m3">
                         <form action="#">
@@ -29,112 +23,70 @@
                                 <div class="btn">
                                     <i class="material-icons">perm_media</i>
                                     <span>Choose Image!</span>
-                                    <input type="file" onChange="readUrl(this);">
+                                    <input type="file" />
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-            <div class = "container" style = "padding-top:2em;">
-                 <div class="row center valign-wrapper">
-            <?php
-     
- function testLangID($data) {
-     $curl = curl_init();
-     
-     $post_args = array(
-         'txt' => $data,
-         'sid' => 'lid-generic',
-         'rt' => 'json' 
-     );
-     
-     curl_setopt($curl, CURLOPT_POST, true);
-     curl_setopt($curl, CURLOPT_POSTFIELDS, $post_args);
-     curl_setopt($curl, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
-     curl_setopt($curl, CURLOPT_USERPWD, "0c4d9ec3-90b3-49e4-b44b-a611eb275d9e:Ylgt1EgrXimL");
-     curl_setopt($curl, CURLOPT_URL, "https://gateway.watsonplatform.net/language-translation/api/v2/identify");
-     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
- 
-     $result = curl_exec($curl);
-     
-     
-     curl_close($curl);
-     $decoded = json_decode($result, true);
-     $cancer = $decoded['languages'][0]['language'];
-     
-     var_dump($cancer);
-     return $decoded;
- }
- // define variables and set to empty values
- $textLID = "";
- $textLIDErr = "";
- $textLang = "";
- 
- if ($_SERVER["REQUEST_METHOD"] == "POST") {  
-    if (empty($_POST["textLID"])) {
-      $textLIDErr = "Text is required (at least 3 words)";
-    } else {
-      $textLID = test_input($_POST["textLID"]);
-    }
- }
- 
- $textLang = testLangID($textLID);
- 
- function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
-    return $data;
- }
- ?>
- 
-     <table>
-         <tr>
-             <td style='width: 30%;'><img class = 'newappIcon' src='images/newapp-icon.png'>
-             </td>
-             <td>
-                 <h2>Have a message in a different language?</h2>
-                 <p><span class="error">* required field.</span></p>
-                 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-                     Enter text to identify language (at least 3 words): <textarea name="textLID" rows="15" cols="30"><?php echo $textLID;?></textarea>
-                       
-                     <span class="error">* <?php echo $textLIDErr;?></span>
-                       
-  
-                     <input type="submit" name="submit" value="Submit">
-                 </form>
-             
-                 <?php
-                 echo "<h2>Text language: </h2>";
-                 echo $textLang["lang"];
-                 ?>
-             </td>
-                </div>
-         </tr>
-            </div>
-     </table>
-            </div>
         </main>
 
         <?php include("footer.php"); ?>
         <?php include("script.php"); ?>
+        <script type="text/javascript" src="js/main.js"></script>
 
         <script type="text/javascript">
-            function readURL(input) {
-                if (input.files && input.files[0]) {
-                    var reader = new FileReader();
+            var count = 0;
+            $(function () {
+                $(":file").change(function () {
+                    if (this.files && this.files[count]) {
+                        var reader = new FileReader();
+                        reader.onload = imageIsLoaded;
+                        reader.readAsDataURL(this.files[count]);
+                        count += 1;
+                    }
+                });
+            });
 
-                    reader.onload = function (e) {
-                        $('#blah')
-                            .attr('src', e.target.result)
-                            .width(150)
-                            .height(200);
-                    };
+            function imageIsLoaded(e) {
+                $('#myImg').attr('src', e.target.result);
+            };
+            var pixelData = null;
+            $(function() {
+                $('img').mousedown(function(e) {
+                    if(!this.canvas) {
+                        this.canvas = $('<canvas />')[0];
+                        this.canvas.width = this.width;
+                        this.canvas.height = this.height;
+                        this.canvas.getContext('2d').drawImage(this, 0, 0, this.width, this.height);
+                    }
 
-                    reader.readAsDataURL(input.files[0]);
-                }
-            }
+                    pixelData = this.canvas.getContext('2d').getImageData(event.offsetX, event.offsetY, 1, 1).data;
+                    alert(pixelData);
+                    $('#output').html('R: ' + pixelData[0] + '<br>G: ' + pixelData[1] + '<br>B: ' + pixelData[2] + '<br>A: ' + pixelData[3]);
+                });
+            });
+
+			var green = [255, 245, 238, 239, 211, 188];
+			var red = [255, 244, 233, 230, 158, 117];
+			var blue = [255, 172, 55, 1, 0, 1];
+			var percents = [0, 16.6, 33.2, 49.8, 65, 71];
+
+			function hydrate() {
+				var temp = percentage(red, green, percentage, pixelData[0], pixelData[1]);
+				var one = temp[0];
+				var two = temp[1];
+				temp = percentage(green, blue, percentage, pixelData[1], pixelData[2]);
+				var three = temp[0];
+				var four = temp[1];
+				temp = percentage(blue), red, percentage, pixelData[2], pixelData[0]);
+				var five = temp[0];
+				var six = temp[0];
+				temp = (one + two + three + four + five + six)/6;
+				alert(temp);
+				return temp;
+			}
         </script>
     </body>
 </html>
