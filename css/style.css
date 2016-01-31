@@ -1,3 +1,6 @@
+.white parallax-container valign-wrapper {
+    background-image:url('bg.jpg');
+}
 body {
     display: flex;
     min-height: 100vh;

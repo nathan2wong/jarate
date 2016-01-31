@@ -10,11 +10,7 @@
     <body>
         <?php include("navbar.php"); ?>
         <main>
-<<<<<<< HEAD
-            <div class="white parallax-container valign-wrapper" style="height: 91vh; background:bg.jpg">
-=======
-            <div class="white parallax-container valign-wrapper" style="height: 91vh;">
->>>>>>> b1e3d94ce4a2573ab4ec4f1a462a1edb35e3f0fb
+            <div class="white parallax-container valign-wrapper" style="height: 91vh; background-image:bg.jpg">
                 <div class="container valign center wow slideInUp">
                     <a class="waves-effect waves-light btn-flat btn-large z-depth-5" href="app">Try Now!</a>
                 </div>
