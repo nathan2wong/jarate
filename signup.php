@@ -1,5 +1,5 @@
 <?php
-    include("initialize.php");
+    /* include("initialize.php");
     if(isset($_SESSION['user'])){
         header("Location: home");
         die;
@@ -25,7 +25,7 @@
         } else {
             $msg = "Please completely fill out the form!";
         }
-    }
+    } */
 ?>
 <!DOCTYPE html>
 <html>

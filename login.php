@@ -1,5 +1,5 @@
 <?php
-    include("initialize.php");
+ /*   include("initialize.php");
     include("variables.php");
 
     $msg = "";
@@ -19,7 +19,7 @@
         } else {
             $msg = "Please enter your email and password!";
         }
-    }
+    } */
 ?>
 <!DOCTYPE html>
 <html>
