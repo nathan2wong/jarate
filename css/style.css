@@ -1,5 +1,5 @@
 .white parallax-container valign-wrapper {
-    background-image:url('bg.jpg');
+    background-image:url('images/bg.png');
 }
 body {
     display: flex;
