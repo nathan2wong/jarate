@@ -36,8 +36,8 @@
                     </div>
                 </div>
             </div>
-            <div class = "results">
-                <h1 text-align:center>Have a message in a different language?</h1>
+            <div class = "container" style = "padding-top:2em;">
+                 <div class="row center valign-wrapper">
             <?php
      
  function testLangID($data) {
@@ -94,11 +94,10 @@
              <td style='width: 30%;'><img class = 'newappIcon' src='images/newapp-icon.png'>
              </td>
              <td>
-                 <h2>Watson Language Identification</h2>
+                 <h2>Have a message in a different language?</h2>
                  <p><span class="error">* required field.</span></p>
                  <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-<input type="submit" value ="<?php echo "jarate";?>"></input>
-                     Enter text to identify language: <textarea name="textLID" rows="5" cols="40"><?php echo $textLID;?></textarea>
+                     Enter text to identify language (at least 3 words): <textarea name="textLID" rows="15" cols="30"><?php echo $textLID;?></textarea>
                        
                      <span class="error">* <?php echo $textLIDErr;?></span>
                        
@@ -111,7 +110,9 @@
                  echo $textLang["lang"];
                  ?>
              </td>
+                </div>
          </tr>
+            </div>
      </table>
             </div>
         </main>
