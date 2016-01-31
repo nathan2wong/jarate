@@ -50,7 +50,7 @@
             </div>
             <div class="parallax-container" style="height: 45vh;">
                 <div class="parallax">
-                    <img class="responsive-img" src="http://placehold.it/500x400">
+                    <img class="responsive-img" src="logo.png">
                 </div>
             </div>
             <div id="mockup" class="container">
