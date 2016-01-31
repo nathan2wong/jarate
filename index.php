@@ -8,12 +8,12 @@
         <?php include("head.php"); ?>
     </head>
     <body>
-        <?php include("navbar-reg.php"); ?>
+        <?php include("navbar.php"); ?>
         <main>
             <div class="white parallax-container valign-wrapper" style="height: 91vh;">
                 <div class="container valign center wow slideInUp">
                     <h1><img src="logo.png" class = "responsive-img"></h1>
-                    <a class="waves-effect waves-light btn-flat btn-large z-depth-5" href="app.php">Try Now!</a>
+                    <a class="waves-effect waves-light btn-flat btn-large z-depth-5" href="app">Try Now!</a>
                 </div>
                 <div class="parallax"><img class="responsive-img" src="http://placehold.it/500x400"></div>
             </div>
@@ -63,8 +63,8 @@
                 </div>
             </div>
         </main>
-        <?php include("footer.php"); ?>
-        <?php include("script.php"); ?>
+        <?php include("footer"); ?>
+        <?php include("script"); ?>
 
         <script type="text/javascript">
             $(document).ready(
