@@ -10,11 +10,11 @@
     <body>
         <?php include("navbar.php"); ?>
         <main>
-            <div class="white parallax-container valign-wrapper" style="height: 91vh;">
-                <div class="container valign center wow slideInUp">
+            <div class="parallax-container valign-wrapper" style="height: 91vh;">
+                <div class="container valign center">
                     <a class="waves-effect waves-light btn-flat btn-large z-depth-5" href="app">Try Now!</a>
                 </div>
-                <div class="parallax"><img class="responsive-img" src="images/bg.png"></div>
+                <div class="parallax"><img class="responsive-img" src="/images/bg.jpg"></div>
             </div>
             <div class="container">
                 <div class="section wow slideInUp">
@@ -62,8 +62,8 @@
                 </div>
             </div>
         </main>
-        <?php include("footer"); ?>
-        <?php include("script"); ?>
+        <?php include("footer.php"); ?>
+        <?php include("script.php"); ?>
 
         <script type="text/javascript">
             $(document).ready(
