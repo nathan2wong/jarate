@@ -15,7 +15,7 @@
                     <h1>Jarate</h1>
                     <a class="waves-effect waves-light btn-flat btn-large z-depth-5" href="app.php">Try Now!</a>
                 </div>
-                <div class="parallax"><img src="http://placehold.it/500x400"></div>
+                <div class="parallax"><img class="responsive-img" src="http://placehold.it/500x400"></div>
             </div>
             <div class="container">
                 <div class="section wow slideInUp">
@@ -54,12 +54,12 @@
             </div>
             <div class="parallax-container" style="height: 45vh;">
                 <div class="parallax">
-                    <img src="http://placehold.it/500x400">
+                    <img class="responsive-img" src="http://placehold.it/500x400">
                 </div>
             </div>
             <div id="mockup" class="container">
                 <div class="center wow slideInUp">
-                    <img src="http://placehold.it/500x400">
+                    <img class="responsive-img" src="http://placehold.it/500x400">
                 </div>
             </div>
         </main>
