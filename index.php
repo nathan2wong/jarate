@@ -6,12 +6,16 @@
 <html>
     <head>
         <?php include("head.php"); ?>
+
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.css"/>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.9/slick.min.js"></script>
     </head>
     <body>
         <?php include("navbar.php"); ?>
         <main>
             <div class="parallax-container valign-wrapper" style="height: 91vh;">
-                <div class="parallax"><img class="responsive-img" src="/images/bg.jpg"></div>
+                <div class="parallax"><img class="responsive-img" src="/images/bg.png"></div>
             </div>
             <div class="container">
                 <div class="section">
@@ -54,8 +58,40 @@
                 </div>
             </div>
             <div id="mockup" class="container">
-                <div class="center wow slideInUp">
-                    <img class="responsive-img" src="http://placehold.it/500x400">
+                
+<style>
+    #slideShowImages { /* The following CSS rules are optional. */
+      border: 1px gray solid;
+      background-color: lightgray;
+    }   
+  
+    #slideShowImages img { /* The following CSS rules are optional. */
+      border: 0.8em black solid;
+      padding: 3px;
+    }   
+  </style>
+
+<body>
+  <div id="slideShowImages">
+    <img src="images/bg%20copy.png" alt="Slide 1" />
+    <img src="images/bg.png" alt="Slide 2" />
+    <img src="images/bg%20copy.png" alt="Slide 3" />    
+    <img src="images/bg%20copy.png" alt="Slide 4" />
+  </div>  
+  <button id="slideShowButton"></button> <!-- Optional button element. -->
+  <script src="js/jquery.slides.js"></script>
+</body>
+
+</html>
+                
+                <div class="center wow slideInUp single-item">
+                    <div>
+                    <img class="responsive-img" src="Feedback.png">
+                    </div>
+                    <div><img class="responsive-img" src="CapturePhotoPage.png">
+                    </div>
+                    <div><img class="responsive-img" src="phone.png">
+                    </div>
                 </div>
             </div>
         </main>
