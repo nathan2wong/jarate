@@ -7,7 +7,7 @@
     <head>
         <?php include("head.php"); ?>
     </head>
-    <div class ="main" style = width:80%; text-align:center;>
+    <div class ="main" style = "width:80%; text-align:center;">
         <p>Jarate is an intelligently designed web and mobile application that can wtrack the user's urine input and output the user's dehydration rate, amount of water needed to drink, and more (such as sleeping time and accessibility for other applications based on color. Coming soon.).</p>
 
         <p>With use of machine learning algorithms in order to optimize the difference between the RGB indices of the reference datapoints, we were able to develop an application that was both applicable in purpose and simple to use. These reference points were acquired from several credible sources we found online. We used the Microsoft Azure platform to perform much of the coding in this project.</p>
