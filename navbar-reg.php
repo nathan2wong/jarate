@@ -1,5 +1,5 @@
-<nav>
-    <div class="nav-wrapper">
+<nav class="white black-text">
+    <div class="nav-wrapper white black-text">
         <a href="index" class="brand-logo center">Jarate</a>
         <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul id="nav" class="left hide-on-med-and-down">
