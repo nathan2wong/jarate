@@ -11,14 +11,14 @@
         <?php include("navbar-reg.php"); ?>
         <main>
             <div class="parallax-container valign-wrapper" style="height: 91vh;">
-                <div class="container valign center">
+                <div class="container valign center wow slideInUp">
                     <h1>Jarate</h1>
                     <a class="waves-effect waves-light btn-flat btn-large z-depth-5" href="app.php">Try Now!</a>
                 </div>
                 <div class="parallax"><img src="http://placehold.it/500x400"></div>
             </div>
             <div class="container">
-                <div class="section">
+                <div class="section wow slideInUp">
                     <h3 class="center red-text section-header">What is Jarate?</h3>
                     <div class="row">
                         <div class="col s4 m2">
@@ -58,7 +58,7 @@
                 </div>
             </div>
             <div id="mockup" class="container">
-                <div class="center">
+                <div class="center wow slideInUp">
                     <img src="http://placehold.it/500x400">
                 </div>
             </div>
@@ -67,9 +67,11 @@
         <?php include("script.php"); ?>
 
         <script type="text/javascript">
-            $(document).ready(function() {
-                $('.parallax').parallax();
-            });
+            $(document).ready(
+                function() {
+                    $('.parallax').parallax();
+                }
+            );
         </script>
     </body>
 </html>

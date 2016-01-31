@@ -1,20 +1,21 @@
 var green = [255, 245, 238, 239, 211, 188];
 var red = [255, 244, 233, 230, 158, 117];
 var blue = [255, 172, 55, 1, 0, 1];
-var percentage = []
-var linGreen[];
-var linRed[];
+var percents = [0, 16.6, 33.2, 49.8, 65, 71];
+var linGreen = [];
+var linRed = [];
 var mean = 0;
 function getClosest(pointsX, pointsY, x, y) {
-    var minDist = pointsX[0] * pointsX[0]) + (pointsY[0] * pointsY[0]);
+    var minDist = (pointsX[0] * pointsX[0]) + (pointsY[0] * pointsY[0]);
     var coor = 0;
-    for(var i = 1; i < points.length; i++) {
+    for(var i = 1; i < pointsX.length; i++) {
         var dist = (pointsX[i] * pointsX[i]) + (pointsY[i] * pointsY[i]);
         if(dist < minDist) {
             minDist = dist;
             coor = i;
         }
     }
+    console.log(i);
     return i;
 }
 
@@ -43,27 +44,30 @@ var c2 = parseColor("ffffff");
 
 console.log(euclideanDistance(c1, c2))
 
-function linearize(pointsX, poinstY, checkpoint) {
+function linearize(pointsX, pointsY, checkPoint) {
     var x = pointsX[checkPoint];
     var y = pointsY[checkPoint];
     var linX;
     var linY;
-    for(var i = 0; i < green.length; i++) {
-        if(pointsX[i] < x && pointsY[i] < x) {
+    for(var i = 0; i < pointsX.length; i++) {
+        if(pointsX[i] < x && pointsY[i] < y) {
             linX = (Math.log(pointsY[i]))/(Math.log(y));
             linY = (Math.log(pointsX[i]))/(Math.log(x));
             break;
         }
     }
+    console.log(linX);
+    console.log(linY);
     return [linX, linY];
 }
 
-function percentage(pointsX, pointsY, percentage, x, y) {
+function percentage(pointsX, pointsY, percents, x, y) {
     var checkPoint = getClosest(pointsX, pointsY, x, y);
     var linear = linearize(pointsX, pointsY, checkPoint);
-    var percenX = linear[0] * percentage[checkPoint];
-    var percenY = linear[1] * percentage[checkPoint];
+    var percenX = linear[0] * percents[checkPoint];
+    var percenY = linear[1] * percents[checkPoint];
     return [percenX, percenY];
 }
 
+console.log(percentage(red, green, percents, 200, 175))
 
