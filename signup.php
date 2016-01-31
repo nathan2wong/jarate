@@ -5,7 +5,7 @@
         die;
     }
     $msg = "";
-    if(isset($_POST['login'])) {
+    if(isset($_POST['submit'])) {
         if($_POST['fname'] != null && $_POST['pass'] != null && $_POST['check-pass'] != null && $_POST['email'] != null && $_POST['lname'] != null) {
             $user = stripslashes($_POST['email']);
             $pass = sha1(stripslashes($_POST['pass']));
@@ -37,6 +37,7 @@
         <main>
             <div class="container">
                 <h2 class="center section-header">Sign Up!</h2>
+                <p><?=$msg; ?></p>
                 <form method="post">
                     <div class="row">
                         <div class="input-field col s12 l6">
@@ -56,12 +57,12 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s12 l6">
-                            <input id="pass" name="pass" type="text">
+                            <input id="pass" name="pass" type="password">
                             <label for="pass">Password</label>
                         </div>
                         <div class="input-field col s12 l6">
-                            <input id="pass-check" name="pass-check" type="text">
-                            <label for="pass-check">Password Check</label>
+                            <input id="check-pass" name="check-pass" type="password">
+                            <label for="check-pass">Password Check</label>
                         </div>
                     </div>
                     <button id="submit" name="submit" class="btn-large waves-block waves-effect waves-light center-align" type="submit" style="margin: auto;">Submit
