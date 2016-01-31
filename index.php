@@ -6,6 +6,9 @@
 <html>
     <head>
         <?php include("head.php"); ?>
+        <link rel="icon" 
+      type="image/ico" 
+      href="favi.ico">
     </head>
     <body>
         <?php include("navbar-reg.php"); ?>
