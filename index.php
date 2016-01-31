@@ -11,9 +11,6 @@
         <?php include("navbar.php"); ?>
         <main>
             <div class="parallax-container valign-wrapper" style="height: 91vh;">
-=======
-            <div class="white parallax-container valign-wrapper" style="height: 91vh; background-image:images/bg.png">
-                <div class="container valign center wow slideInUp">
                 <div class="parallax"><img class="responsive-img" src="/images/bg.jpg"></div>
             </div>
             <div class="container">
