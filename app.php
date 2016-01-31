@@ -25,7 +25,7 @@
                     </div>
                     <div class="col s12 m3">
                         <form action="#">
-                            <div class="file-field input-field valign" id="upload-image">
+                            <div class="file-field input-field valign">
                                 <div class="btn">
                                     <i class="material-icons">perm_media</i>
                                     <span>Choose Image!</span>
@@ -36,26 +36,9 @@
                     </div>
                 </div>
             </div>
-
         </main>
 
         <?php include("footer.php"); ?>
         <?php include("script.php"); ?>
-        <script>
-            function handleFileSelect(evt) {
-                var files = evt.target.files;
-                var f = files[0];
-                var reader = new FileReader();
-
-                  reader.onload = (function(theFile) {
-                        return function(e) {
-                          document.getElementById('user-image').innerHTML = ['<img src="', e.target.result,'" title="', theFile.name, '" width="400px" height="575px" />'].join('');
-                        };
-                  })(f);
-
-                  reader.readAsDataURL(f);
-            }
-              document.getElementById('upload-image').addEventListener('change', handleFileSelect, false);
-        </script>
     </body>
 </html>
