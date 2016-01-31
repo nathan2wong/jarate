@@ -20,9 +20,15 @@
                         <div class="col s4 m2 wow slideInUp">
                             <h2 class="center black-text"><i class="material-icons medium">perm_identity</i></h2>
                         </div>
+<<<<<<< HEAD
                         <div class="col s8 m4 wow slideInUp">
                             <h4 class="black-text col-content">Character</h4>
                             <p>klsdjflkasjdflk jaslkdf jakslj flkasj fl; jaslkdf jlasj f lkjaslkf jsaljdf l;kasdjf lkjsalkf jlaskjf lasdjf lkasj dl;fj aslkdfj lkasdj flasldkjf lasjfd lkasj flk jaslfj lkadsj flkjasdflk j</p>
+=======
+                        <div class="col s8 m4">
+                            <h4 class="red-text col-content">Accuracy</h4>
+                            <p>Jarate is a highly-accurate, machine learning algorithmic based program which helps the user determine their approximate dehydration rate based on the color of their urine.</p>
+>>>>>>> origin/master
                         </div>
                         <div class="col s4 m2 wow slideInUp">
                             <h2 class="center black-text"><i class="material-icons medium">perm_identity</i></h2>
