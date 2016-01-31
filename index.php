@@ -71,25 +71,6 @@
     }   
   </style>
 
-<body>
-  <div id="slideShowImages">
-    <img src="images/bg%20copy.png" alt="Slide 1" />
-    <img src="images/bg.png" alt="Slide 2" />
-    <img src="images/bg%20copy.png" alt="Slide 3" />    
-    <img src="images/bg%20copy.png" alt="Slide 4" />
-  </div>  
-  <button id="slideShowButton"></button> <!-- Optional button element. -->
-  <script src="js/jquery.slides.js"></script>
-</body>
-
-</html>
-                
-                <div class="center wow slideInUp single-item">
-                    <div>
-                    <img class="responsive-img" src="Feedback.png">
-                    </div>
-                    <div><img class="responsive-img" src="CapturePhotoPage.png">
-                    </div>
                     <div><img class="responsive-img" src="phone.png">
                     </div>
                 </div>
