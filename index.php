@@ -8,36 +8,68 @@
         <?php include("head.php"); ?>
     </head>
     <body>
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#" class="brand-logo center">Need a better title</a>
-                <a href="#" data-activates="mobile-nav" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul id="nav" class="left hide-on-med-and-down">
-                    <li><a href="#">Links</a></li>
-                </ul>
-
-                <ul class="side-nav" id="mobile-nav">
-                    <li><a href="#">Links</a></li>
-                </ul>
-            </div>
-        </nav>
+        <?php include("navbar-reg.php"); ?>
         <main>
-            <div class="parallax-container">
+            <div class="parallax-container valign-wrapper" style="height: 91vh;">
+                <div class="container valign center">
+                    <h1>Jarate</h1>
+                    <p>Description</p>
+                </div>
                 <div class="parallax"><img src="http://placehold.it/500x400"></div>
             </div>
             <div class="container">
-                <p class="center">Swag</p>
+                <div class="section">
+                    <h3 class="center red-text section-header">What is Jarate?</h3>
+                    <div class="row">
+                        <div class="col s4 m2">
+                            <h2 class="center red-text"><i class="material-icons medium">perm_identity</i></h2>
+                        </div>
+                        <div class="col s8 m4">
+                            <h4 class="red-text col-content">Character</h4>
+                            <p>klsdjflkasjdflk jaslkdf jakslj flkasj fl; jaslkdf jlasj f lkjaslkf jsaljdf l;kasdjf lkjsalkf jlaskjf lasdjf lkasj dl;fj aslkdfj lkasdj flasldkjf lasjfd lkasj flk jaslfj lkadsj flkjasdflk j</p>
+                        </div>
+                        <div class="col s4 m2">
+                            <h2 class="center red-text"><i class="material-icons medium">perm_identity</i></h2>
+                        </div>
+                        <div class="col s8 m4">
+                            <h4 class="red-text col-content">Character</h4>
+                            <p>klsdjflkasjdflk jaslkdf jakslj flkasj fl; jaslkdf jlasj f lkjaslkf jsaljdf l;kasdjf lkjsalkf jlaskjf lasdjf lkasj dl;fj aslkdfj lkasdj flasldkjf lasjfd lkasj flk jaslfj lkadsj flkjasdflk j</p>
+                        </div>
+                        <div class="col s4 m2">
+                            <h2 class="center red-text"><i class="material-icons medium">perm_identity</i></h2>
+                        </div>
+                        <div class="col s8 m4">
+                            <h4 class="red-text col-content">Character</h4>
+                            <p>klsdjflkasjdflk jaslkdf jakslj flkasj fl; jaslkdf jlasj f lkjaslkf jsaljdf l;kasdjf lkjsalkf jlaskjf lasdjf lkasj dl;fj aslkdfj lkasdj flasldkjf lasjfd lkasj flk jaslfj lkadsj flkjasdflk j</p>
+                        </div>
+                        <div class="col s4 m2">
+                            <h2 class="center red-text"><i class="material-icons medium">perm_identity</i></h2>
+                        </div>
+                        <div class="col s8 m4">
+                            <h4 class="red-text col-content">Character</h4>
+                            <p>klsdjflkasjdflk jaslkdf jakslj flkasj fl; jaslkdf jlasj f lkjaslkf jsaljdf l;kasdjf lkjsalkf jlaskjf lasdjf lkasj dl;fj aslkdfj lkasdj flasldkjf lasjfd lkasj flk jaslfj lkadsj flkjasdflk j</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="parallax-container" style="height: 45vh;">
+                <div class="parallax">
+                    <img src="http://placehold.it/500x400">
+                </div>
+            </div>
+            <div id="mockup" class="container">
+                <div class="center">
+                    <img src="http://placehold.it/500x400">
+                </div>
             </div>
         </main>
-        <footer>
-
-        </footer>
+        <?php include("footer.php"); ?>
         <?php include("script.php"); ?>
 
         <script type="text/javascript">
             $(document).ready(function() {
                 $('.parallax').parallax();
-            )}
+            });
         </script>
     </body>
 </html>
