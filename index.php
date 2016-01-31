@@ -10,12 +10,11 @@
     <body>
         <?php include("navbar.php"); ?>
         <main>
-            <div class="white parallax-container valign-wrapper" style="height: 91vh; background:"bg.png"">
+            <div class="white parallax-container valign-wrapper" style="height: 91vh;">
                 <div class="container valign center wow slideInUp">
-                    <h1><img src="logo.png" class = "responsive-img"></h1>
                     <a class="waves-effect waves-light btn-flat btn-large z-depth-5" href="app">Try Now!</a>
                 </div>
-                <div class="parallax"><img class="responsive-img" src="http://placehold.it/500x400"></div>
+                <div class="parallax"><img class="responsive-img" src="images/bg.png"></div>
             </div>
             <div class="container">
                 <div class="section wow slideInUp">
