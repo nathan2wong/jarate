@@ -11,9 +11,8 @@
             $pass = sha1(stripslashes($_POST['pass']));
             $fname = stipslashes($_POST['fname']);
             $lname = stipslashes($_POST['lname']);
-            $query = $connect->query("SELECT * FROM `users` WHERE `email`='$user' AND `pass` = '$pass' LIMIT 1");
+            $query = $connect->query("SELECT * FROM `users` WHERE `email`='$user' LIMIT 1");
             if($query->num_rows < 0) {
-                $connect->query("INSERT INTO `users` (`ID`, `fname`, `lname`, `email`, `pass`) VALUES()");
                 $max = $connect->query("SELECT * FROM `users` ORDER BY `ID` DESC LIMIT 1");
                 $max = mysqli_fetch_array($max);
                 $max = $max['ID'] + 1;
@@ -61,7 +60,11 @@
                             <label for="pass">Password</label>
                         </div>
                         <div class="input-field col s12 l6">
+<<<<<<< HEAD
                             <input id="check-pass" name="check-pass" type="password">
+=======
+                            <input id="check-pass" name="check-pass" type="text">
+>>>>>>> b1e3d94ce4a2573ab4ec4f1a462a1edb35e3f0fb
                             <label for="check-pass">Password Check</label>
                         </div>
                     </div>

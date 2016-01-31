@@ -30,10 +30,9 @@
      
      curl_close($curl);
      $decoded = json_decode($result, true);
-     $cancer = $decoded['languages'];
+     $cancer = $decoded['languages'][0]['language'];
      
-     $monkey = "oo-oo";
-     echo "<script type='text/javascript'>alert('$result');</script>";
+     var_dump($cancer);
      return $decoded;
  }
  // define variables and set to empty values
@@ -66,7 +65,7 @@
              <td>
                  <h2>Watson Language Identification</h2>
                  <p><span class="error">* required field.</span></p>
-                 <form method="post" target="_blank" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
 <input type="submit" value ="<?php echo "jarate";?>"></input>
                      Enter text to identify language: <textarea name="textLID" rows="5" cols="40"><?php echo $textLID;?></textarea>
                        
