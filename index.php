@@ -1,10 +1,11 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Need a better title</title>
+        <?php include("head.php"); ?>
     </head>
     <body>
         <nav>
@@ -21,15 +22,22 @@
             </div>
         </nav>
         <main>
+            <div class="parallax-container">
+                <div class="parallax"><img src="http://placehold.it/500x400"></div>
+            </div>
             <div class="container">
-                <div class="parallax-container">
-                    <div class="parallax"><img src="images/parallax1.jpg"></div>
-                </div>
                 <p class="center">Swag</p>
             </div>
         </main>
         <footer>
 
         </footer>
+        <?php include("script.php"); ?>
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.parallax').parallax();
+            )}
+        </script>
     </body>
 </html>
