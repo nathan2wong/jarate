@@ -1,9 +1,5 @@
 <?php
     include("initialize.php");
-    if(isset($_SESSION['user'])){
-        header("Location: home.php");
-        die;
-    }
     include("variables.php");
 
     $msg = "";

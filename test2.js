@@ -54,7 +54,7 @@ function linearize(pointsX, pointsY, checkPoint) {
     for(var i = 0; i < pointsX.length; i++) {
         console.log("pointsX is " + pointsX[i] + " and x is: " + x);
         console.log("pointsY is " + pointsY[i] + " and y is: " + y);
-        
+
         if(pointsX[i] < x && pointsY[i] < y) {
             console.log("am i in the if statment");
             linX = (Math.log(pointsY[i]))/(Math.log(y));
@@ -77,7 +77,7 @@ function percentage(pointsX, pointsY, percents, x, y) {
     var linear = linearize(pointsX, pointsY, checkPoint);
     var percenX = linear[0] * percents[checkPoint];
     var percenY = linear[1] * percents[checkPoint];
-    return [percenX, percenY];
+    return (percenX + percenY)/2;
 }
 
-console.log(percentage(red, green, percents, 220, 200))
+console.log(percentage(red, green, percents, 220, 200));
